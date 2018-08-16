@@ -1,5 +1,23 @@
 # Gruppeopgave
 
+## Answer to Ex. 3.3.2
+import requests
+import json
+
+construct_link('FOD', ['Tid=*', 'BARNKON=P']) #får et link med vores data
+
+def function(x):
+    ronja = requests.get(x) #laver en fil
+    ronja = ronja.json() #unpack JSON payload
+
+#trying to store the JSON file
+
+    with open('ronja.json', 'w') as f:
+        response_json_str = json.dumps(ronja) #skaber en string response_json_str ud fra vores girls.json fil
+        f.write(response_json_str)
+    return ronja
+
+data = function('https://api.statbank.dk/v1/data/FOD/JSONSTAT?lang=en&Tid=*&BARNKON=P') #sætter linket fra construct link ind i functionen
 
 ## Answer to Ex. 6.1.4
 df_weather['country'] = df_weather['station'].str[:3]
