@@ -1,16 +1,11 @@
-# gruppeopgave
-
-hej!
-
-hej sofie, vi kan ikke se det!
+# Gruppeopgave
 
 
-
-# [Answer to Ex. 6.1.4]
+## [Answer to Ex. 6.1.4]
 df_weather['country'] = df_weather['station'].str[:3]
 print(df_weather)
 
-# [Answer to Ex. 6.1.5]
+## [Answer to Ex. 6.1.5]
 def vejr(aar):
     url = 'https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/%i.csv.gz' %aar 
 
